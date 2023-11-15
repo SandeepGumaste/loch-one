@@ -4,3 +4,10 @@ export interface WhaleCardProps{
     content:React.ReactNode;
     footer:React.ReactNode
   }
+
+  export interface TestimonialCardProps{
+    name:string;
+    designation:string
+    review:string;
+
+}

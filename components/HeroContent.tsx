@@ -1,11 +1,11 @@
 import Image from "next/image";
-import Testimonials from "./Testimonials";
+import TestimonialsLayout from "./TestimonialsLayout";
 import WhaleCardsLayout from "./WhaleCardsLayout";
 
 const HeroContent = () => {
   return (
-    <div className="bg-gradient-to-bl from-black from-20% via-[#2F15D0] via-50% to-[#1FA911]/80 to-80% px-5 py-5 sm:px-10 md:px-[62px] md:py-[92px]">
-      <div className="flex flex-col justify-between gap-[72px]">
+    <div className="bg-gradient-to-bl from-black from-20% via-[#2F15D0] via-50% to-[#1FA911]/80 to-80% px-5 sm:px-10 md:px-[62px] pt-20 h-screen overflow-y-auto overflow-x-hidden">
+      <div className="flex flex-col justify-between gap-11">
         <div className="flex xl:flex-row flex-col items-start justify-between">
           <div className="flex flex-col">
 
@@ -23,7 +23,7 @@ const HeroContent = () => {
           </div>
           <WhaleCardsLayout/>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-10">
           <div className="flex justify-center items-center  h-[306px] relative ">
             <Image
               src="/images/cohorts.png"
@@ -45,25 +45,22 @@ const HeroContent = () => {
             </div>
           </div>
         </div>
-        {/* <div className="flex flex-col items-center md:items-end ">
-          <div className="md:mr-20 mr-6">
-            <h4 className="text-[25px] font-medium text-[#F2F2F2] md:text-right text-center">
-              Testimonials
-            </h4>
-          </div>
-
-            <div className="w-full h-px bg-slate-300"></div>
-          <div className="flex items-center">
+        <div className="flex flex-col items-center md:items-end w-full pb-10">
+          <h4 className="text-2xl font-medium text-[#F2F2F2] md:text-right text-center pb-5">
+            Testimonials
+          </h4>
+          <div className="w-full h-px bg-slate-300 mb-10"></div>
+          <div className="flex w-full flex-col md:flex-row">
             <Image
-              src="/Vector.png"
+              src="/icons/logo.svg"
               alt="Loch logo"
-              width={60}
-              height={60}
-              className="mt-20 mx-16 hidden md:block"
+              width={80}
+              height={80}
+              className="object-contain object-bottom mr-5"
             />
-            <Testimonials />
+            <TestimonialsLayout />
           </div>
-        </div> */}
+        </div>
       </div>
     </div>
   );

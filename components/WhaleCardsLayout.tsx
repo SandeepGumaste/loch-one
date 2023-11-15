@@ -3,7 +3,6 @@ import { Input } from "./ui/input";
 import WhaleCard from "./WhaleCard";
 import { WhaleCardProps } from "@/types";
 import Image from "next/image";
-import useWindowResize from "@/hooks/useWindowResize";
 
 
 const whaleCardsData: WhaleCardProps[]=[
@@ -47,9 +46,9 @@ const WhaleCardsLayout = () => {
         <div className="flex scroller__inner w-fit">
             {
               cardsDataX2.map(
-                  (cardData)=>{
+                  (cardData,index)=>{
                       const {iconUrl,action,content,footer} = cardData
-                    return <WhaleCard key={iconUrl} iconUrl={iconUrl} action={action} content={content} footer={footer} />}
+                    return <WhaleCard key={iconUrl+index} iconUrl={iconUrl} action={action} content={content} footer={footer} />}
               )
             }
           </div>

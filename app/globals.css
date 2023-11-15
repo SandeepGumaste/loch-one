@@ -111,7 +111,7 @@ body{
 }
 
 .whaleCards__layout{
-  max-width: 200px;
+  width: auto;
 }
 
 @media screen and (min-width: 1024px) {
@@ -133,7 +133,26 @@ body{
 }
 
 
+::-webkit-scrollbar {
+  width: 8px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffffff38;
+  border-radius: 5px;
+  box-shadow: 0 0 3px black;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff52;
+}
 
 
 
