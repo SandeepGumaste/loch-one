@@ -22,7 +22,7 @@ const SignUp = () => {
     setIsValidEmail(isValid);
   };
   return (
-      <div className="xl:min-w-[640px] md:min-w-[500px] flex px-10 bg-white min-h-screen h-full  flex-col items-center justify-center shadow-md ">
+      <div className="w-full xl:min-w-[640px] lg:min-w-[500px] flex px-10 bg-white min-h-screen h-full  flex-col items-center justify-center shadow-2xl z-50">
         <form onSubmit={handleSubmit}>
             <div className="mx-auto w-[340px]">
               <h2 className="text-[39px] text-[#B0B1B3] leading-[48px] font-medium pb-6">

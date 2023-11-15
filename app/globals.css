@@ -72,18 +72,10 @@
   }
   body {
     @apply bg-background text-foreground;
+    scroll-behavior: smooth;
   }
 }
 
-.slider::before,
-.slider::after {
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.6) 0%, rgba(255,255,255,0) 100%);
-  content: '';
-  height: 100%;
-  position: absolute;
-  width: 100%;
-  z-index: 2;
-}
 
 body{
   box-sizing: border-box;
@@ -111,7 +103,7 @@ body{
 }
 
 .whaleCards__layout{
-  max-width: 200px;
+  width: auto;
 }
 
 @media screen and (min-width: 1024px) {
@@ -133,7 +125,26 @@ body{
 }
 
 
+::-webkit-scrollbar {
+  width: 8px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ffffff38;
+  border-radius: 5px;
+  box-shadow: 0 0 3px black;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff52;
+}
 
 
 
