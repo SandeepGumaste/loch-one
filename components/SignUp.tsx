@@ -8,13 +8,12 @@ const SignUp = () => {
   const [email, setEmail] = useState("");
   const [isValidEmail, setIsValidEmail] = useState(false);
 
-  const handleSubmit = (event: any) => {
+  const handleSubmit = (event:React.FormEvent) => {
     event.preventDefault();
-
     window.location.href = "https://app.loch.one/welcome";
   };
 
-  const handleInputChange = (e: any) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = e.target.value;
     setEmail(inputValue);
 
@@ -22,7 +21,7 @@ const SignUp = () => {
     setIsValidEmail(isValid);
   };
   return (
-      <div className="w-full xl:min-w-[640px] lg:min-w-[500px] flex px-10 bg-white min-h-screen h-full  flex-col items-center justify-center shadow-2xl z-50">
+      <div className="w-full xl:min-w-[640px] lg:min-w-[500px] flex px-10 py-20 bg-white  md:min-h-screen h-full  flex-col items-center justify-center shadow-2xl z-50">
         <form onSubmit={handleSubmit}>
             <div className="mx-auto w-[340px]">
               <h2 className="text-[39px] text-[#B0B1B3] leading-[48px] font-medium pb-6">
