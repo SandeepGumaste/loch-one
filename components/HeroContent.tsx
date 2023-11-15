@@ -4,8 +4,8 @@ import WhaleCardsLayout from "./WhaleCardsLayout";
 
 const HeroContent = () => {
   return (
-    <div className="bg-gradient-to-bl from-black from-20% via-[#2F15D0] via-50% to-[#1FA911]/80 to-80% px-5 sm:px-10 md:px-[62px] pt-20 h-screen overflow-y-auto overflow-x-hidden">
-      <div className="flex flex-col justify-between gap-11">
+    <div className="bg-gradient-to-bl from-black from-20% via-[#2F15D0] via-50% to-[#1FA911]/80 to-80% px-5 sm:px-10 md:px-[62px] pt-10 md:pt-20  min-h-screen overflow-y-auto overflow-x-hidden">
+      <div className="flex flex-col 2xl:justify-around h-full gap-11 2xl:gap-0">
         <div className="flex xl:flex-row flex-col items-start justify-between">
           <div className="flex flex-col">
 
@@ -23,7 +23,7 @@ const HeroContent = () => {
           </div>
           <WhaleCardsLayout/>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 gap-10">
           <div className="flex justify-center items-center  h-[306px] relative ">
             <Image
               src="/images/cohorts.png"

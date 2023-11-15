@@ -9,7 +9,7 @@ const TestimonialCard:React.FC<TestimonialCardProps> = ({
     name,designation,review
 }) => {
   return (
-    <Card key={name} className={`${review.length<=112?'bg-white shadow rounded-lg p-5 md:w-[360px]':'bg-white shadow min-w-max rounded-lg p-5'}`}>
+    <Card key={name} className={`${review.length<=112?'bg-white shadow rounded-lg p-5 max-w-none md:max-w-[360px]':'bg-white shadow min-w-min md:min-w-max rounded-lg p-5'}`}>
 
                   <p className="text-base font-semibold pb-5">
                   {name}
@@ -17,7 +17,7 @@ const TestimonialCard:React.FC<TestimonialCardProps> = ({
                       {designation}
                     </span>
                   </p>
-                  <p className="text-base  font-medium text-[#1D2129]">
+                  <p className="text-base  font-medium text-[#1D2129] max-w-lg">
                     “{review}”
                   </p>
               </Card>

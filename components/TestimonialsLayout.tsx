@@ -2,8 +2,7 @@
 
 import React,{useState,useEffect} from "react";
 import { motion } from "framer-motion";
-import { Card } from "./ui/card";
-import TestimonialCard from "./testimonialCard";
+import TestimonialCard from "./TestimonialCard";
 
 const testimonialsData=[
   {
@@ -37,17 +36,19 @@ return testimonialsData.map((data,index)=>{
 
 const TestimonialsLayout = () => {
   return (
-    <div className="w-[calc(100% - 80px)] overflow-visible ">
+    <div className="w-[calc(100% - 80px)] overflow-visible">
       <motion.div
-        className="hidden md:flex flex-col md:flex-row gap-4 items-start justify-between min-w-max backdrop-blur-[2px] "
+        className="hidden md:flex flex-col md:flex-row gap-4 items-start justify-between min-w-max h-36 backdrop-blur-[2px]"
         drag="x"
-        dragConstraints={window.innerWidth > 700 ? { left: -700, right: 0 }:{ left: 0, right: 0 }}
+        dragConstraints={{ left: -700, right: 0 }}
         dragElastic={0.5}
       >
         <TestimonialCards/>
       </motion.div>
       
-      
+      <div className="flex md:hidden flex-col gap-4 pt-10">
+        <TestimonialCards/>
+      </div>
     </div>
   );
 };
