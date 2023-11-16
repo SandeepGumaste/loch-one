@@ -1,8 +1,10 @@
 import Image from "next/image";
 import TestimonialsLayout from "./TestimonialsLayout";
 import WhaleCardsLayout from "./WhaleCardsLayout";
+import { useRef } from "react";
 
 const HeroContent = () => {
+  const testimonialsContainer = useRef<HTMLDivElement|null>(null)
   return (
     <div className="bg-gradient-to-bl from-black from-20% via-[#2F15D0] via-50% to-[#1FA911]/80 to-80% px-5 sm:px-10 md:px-[62px] pt-10 md:pt-20  min-h-screen overflow-y-auto overflow-x-hidden">
       <div className="flex flex-col 2xl:justify-around h-full gap-11 2xl:gap-0">
@@ -45,7 +47,7 @@ const HeroContent = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col items-center md:items-end w-full pb-10">
+        <div ref={testimonialsContainer} className="flex flex-col items-center md:items-end w-full pb-10">
           <h4 className="text-2xl font-medium text-[#F2F2F2] text-right pb-5">
             Testimonials
           </h4>
@@ -58,7 +60,7 @@ const HeroContent = () => {
               height={80}
               className="object-contain object-bottom mr-5"
             />
-            <TestimonialsLayout />
+            <TestimonialsLayout testimonialsContainer={testimonialsContainer} />
           </div>
         </div>
       </div>
