@@ -2,7 +2,6 @@
 import HeroContent from "@/components/HeroContent";
 import SignUp from "../components/SignUp";
 import React, { useEffect, useRef } from "react";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
