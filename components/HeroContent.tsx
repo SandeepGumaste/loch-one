@@ -14,7 +14,7 @@ const HeroContent = () => {
             <Image src="/icons/Bell.svg" width={32} height={32} alt="bell"/>
 
             <div className="py-4">
-            <h3 className="text-[#F2F2F2] text-[28px] md:text-[31px] leading-10 pb-2 text__shadow">
+            <h3 className="text-grey-100 text-2.5xl md:text-[31px] leading-10 pb-2 text__shadow">
               Get notified when a highly correlated whale makes a move
             </h3>
             <p className="text-gray-300">
@@ -37,7 +37,7 @@ const HeroContent = () => {
           <div className="flex flex-col items-end justify-center">
             <Image src="/icons/Eye.svg" alt="eye" width={32} height={32}/>
             <div className="text-right max-w-sm">
-              <h3 className="text-[#F2F2F2] text-[28px] md:text-[31px] leading-10 ">
+              <h3 className="text-grey-100 text-2.5xl md:text-[31px] leading-10 ">
                 Watch what the whales are doing
               </h3>
               <p className="text-gray-300">
@@ -48,10 +48,10 @@ const HeroContent = () => {
           </div>
         </div>
         <div ref={testimonialsContainer} className="flex flex-col items-center md:items-end w-full pb-10">
-          <h4 className="text-2xl font-medium text-[#F2F2F2] text-right pb-5">
+          <h4 className="text-2xl font-medium text-grey-100 text-right pb-5">
             Testimonials
           </h4>
-          <div className="w-full h-px bg-slate-300 mb-10"></div>
+          <div className="w-full h-px bg-grey-50 mb-10"></div>
           <div className="flex w-full flex-col md:flex-row">
             <Image
               src="/icons/logo.svg"

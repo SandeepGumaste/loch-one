@@ -75,6 +75,27 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      fontSize:{
+        '2.5xl':'1.75rem'
+      },
+      textColor:{
+        grey:{
+          100:'#E5E5E6',
+          200:'#CACBCC',
+          300: '#B0B1B3',
+          400:'#96979A',
+          500:'#1D2129',
+          900:'#19191A'
+        },
+        bg:{
+          100:'#F2F2F2'
+        }
+      },
+      backgroundColor:{
+        grey:{
+          50:'#E5E5E680',
+        }
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],
