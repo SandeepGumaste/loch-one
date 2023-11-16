@@ -1,6 +1,4 @@
-"use client";
-
-import React,{useState,useEffect} from "react";
+import React,{useState,useRef,useEffect} from "react";
 import { motion } from "framer-motion";
 import TestimonialCard from "./TestimonialCard";
 
@@ -29,21 +27,34 @@ const TestimonialCards=()=>{
 return testimonialsData.map((data,index)=>{
   const {name,designation,review} = data
   return (
-    <TestimonialCard key={name+index} name={name} designation={designation} review={review}/>
+    <motion.div key={name+index} className="item">
+      <TestimonialCard  name={name} designation={designation} review={review}/>
+    </motion.div>
   )
 })
 }
 
-const TestimonialsLayout = () => {
+const TestimonialsLayout:React.FC<{testimonialsContainer:React.RefObject<HTMLDivElement>
+}> = ({testimonialsContainer}) => {
+  const [width, setWidth] = useState(0)
+  const carousel = useRef<HTMLDivElement|null>(null)
+
+  useEffect(() => {
+    if(carousel.current && testimonialsContainer.current){
+      setWidth(carousel.current?.scrollWidth - testimonialsContainer.current?.offsetWidth)
+    }
+
+  }, [testimonialsContainer])
+  
   return (
     <div className="w-[calc(100% - 80px)] overflow-visible">
-      <motion.div
-        className="hidden md:flex flex-col md:flex-row gap-4 items-start justify-between min-w-max h-36 backdrop-blur-[2px]"
-        drag="x"
-        dragConstraints={{ left: -700, right: 0 }}
-        dragElastic={0.5}
+
+      <motion.div ref={carousel}
+        className="hidden md:flex flex-col md:flex-row gap-4 items-start justify-between min-w-max h-36 backdrop-blur-[2px] cursor-grab overflow-visible"
       >
-        <TestimonialCards/>
+        <motion.div drag="x" dragConstraints={{right:0, left:-width}} className="flex gap-4">
+          <TestimonialCards/>
+        </motion.div>
       </motion.div>
       
       <div className="flex md:hidden flex-col gap-4 pt-10">
